@@ -4,19 +4,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portifólio Antonio</title>
+    <link rel="icon" href="https://api.iconify.design/mdi/code-tags.svg" type="image/svg+xml">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Contato</h1>
-        <h2>Entre em contato comigo</h2>
-        <p>Email: antonio346753@gmail.com</p>
-        <p>Telefone: (34) 98830-7103</p>
-        <p>Redes Sociais: <a href="https://www.linkedin.com/in/antonio-santos-6a1242265/">LinkedIn</a></p>
-
-        <a href="{% url 'home' %}" class="btn btn-outline-secondary">Voltar para a página inicial</a>
-    </div>  
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'projects' %}">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Curriculo</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link  active" href="{% url 'contato' %}">Contato</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1 class="pd-5 mt-5 text-center">Contato</h1>
+    <div class="container-sm pd-5 text-start bg-body rounded p-5 w-50 mx-auto shadow">
+        <p class="fs-5 mb-3 d-flex justify-content-between align-items-center">
+          <span class="text-secondary bg-body-tertiary shadow rounded p-2 me-2">Email:</span>
+          <span class="flex-grow-1 bg-light rounded p-2 text-break">antonio346753@gmail.com</span>
+        </p>
+        <p class="fs-5 mb-3 d-flex justify-content-between align-items-center">
+          <span class="text-secondary bg-body-tertiary shadow rounded p-2 me-2">LinkedIn:</span>
+          <a href="https://www.linkedin.com/in/antonio-santos-6a1242265/" class="flex-grow-1 bg-light rounded p-2 text-decoration-none text-break">LinkedIn</a>
+        </p>
+        <p class="fs-5 mb-3 d-flex justify-content-between align-items-center">
+          <span class="text-secondary bg-body-tertiary shadow rounded p-2 me-2">Github:</span>
+          <a href="https://github.com/toninxl" class="flex-grow-1 bg-light rounded p-2 text-decoration-none text-break">Github</a>
+        </p>
+    </div>     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>

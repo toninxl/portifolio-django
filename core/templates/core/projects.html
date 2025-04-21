@@ -4,9 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portifólio Antonio</title>
+    <link rel="icon" href="https://api.iconify.design/mdi/code-tags.svg" type="image/svg+xml">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link " href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link active" href="{% url 'projects' %}">Projetos</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Curriculo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contato' %}">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <div class="container mt-5">
         <h1 class="mb-4">Meus Projetos</h1>
         
@@ -26,7 +46,7 @@
                         <p class="card-text">{{ project.description|truncatewords:30 }}</p>
                         <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Ver detalhes</a>
                         {% if project.url %}
-                        <a href="{{ project.url }}" class="btn btn-outline-secondary" target="_blank">Visitar site</a>
+                        <a href="{{ project.url }}" class="btn btn-outline-success" target="_blank">Visitar site</a>
                         {% endif %}
                     </div>
                 </div>
@@ -38,10 +58,6 @@
                 </div>
             </div>
             {% endfor %}
-        </div>
-        
-        <div class="mt-4">
-            <a href="{% url 'home' %}" class="btn btn-secondary">Voltar para a página inicial</a>
         </div>
     </div>
 

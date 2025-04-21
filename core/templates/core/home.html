@@ -1,26 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portifólio Antonio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <meta name="description" content="Portifólio Antonio" />
+    <meta name="author" content="Antonio" />
+    <link rel="icon" href="https://api.iconify.design/mdi/code-tags.svg" type="image/svg+xml">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-8 offset-md-2 text-center">
-                <h1 class="display-4 mb-4">Bem-vindo ao meu Portfólio</h1>
-                <p class="lead mb-5">Olá! Sou Antonio, um desenvolvedor apaixonado por criar soluções inovadoras.</p>
-                
-                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                    <a href="{% url 'projects' %}" class="btn btn-primary btn-lg px-4 gap-3">Ver meus projetos</a>
-                    <a href="{% url 'contato' %}" class="btn btn-outline-secondary btn-lg px-4">Contato</a>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link active" href="{% url 'home' %}">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'projects' %}">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Curriculo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contato' %}">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+          <!-- Added photo above heading -->
+          {% comment %} <img src="{% static 'images/antonio_photo.jpg' %}" alt="Antonio Photo" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;"> {% endcomment %}
+
+          <h1 class="display-4 mb-4">Bem-vindo ao meu Portfólio</h1>
+          <div class="container-sm pd-5 mb-5 text-start bg-body rounded p-5 w-100 mx-auto shadow">
+          <p class="lead mb-5 text-muted text-start w-100 mx-auto mb-5 ">
+            Olá! Sou Antonio, um desenvolvedor apaixonado por criar soluções
+            inovadoras. Sou formado em Técnico em Eletrônica pelo CEFET-MG e
+            atualmente curso Análise e Desenvolvimento de Sistemas. Tenho sólida
+            experiência em análise e desenvolvimento de hardware e firmware para
+            sistemas embarcados, com foco em microcontroladores, onde já
+            trabalhei com plataformas como ESP32 e Arduino. Minha expertise
+            abrange a integração de periféricos, implementação de protocolos de
+            comunicação e otimização de sistemas, sempre garantindo robustez e
+            eficiência. Paralelamente, atuo no desenvolvimento de software para
+            web e mobile, criando interfaces interativas e dashboards que se
+            conectam a sistemas embarcados. Meu conhecimento inclui tecnologias
+            modernas e frameworks que facilitam a criação de soluções
+            inovadoras. Além disso, possuo experiência em gerenciamento de
+            projetos, metodologias ágeis e práticas DevOps, o que me permite
+            oferecer uma visão integrada do desenvolvimento e operação de
+            sistemas. Estou comprometido em entregar projetos de alta qualidade
+            e em constante evolução, sempre alinhados às necessidades dos
+            clientes.
+          </p>
+          </div>
         </div>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
